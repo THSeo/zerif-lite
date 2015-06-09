@@ -626,7 +626,7 @@ class zerif_ourfocus extends WP_Widget
 				if( !empty($instance['text']) ):
 				
 					echo '<p>';
-						echo htmlspecialchars_decode(apply_filters('widget_title', $instance['text']));
+						echo htmlspecialchars_decode(apply_filters('widget_title', stripslashes($instance['text'])));
 					echo '</p>';
 				endif;
 			?>	
